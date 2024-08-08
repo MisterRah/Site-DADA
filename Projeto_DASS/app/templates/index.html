@@ -1,64 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metodologia Lean</title>
-    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Dass-lean</title>
+    <link rel="stylesheet" href="static/css/text.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">Lean</div>
-            <div class="search-bar">
-                <input type="text" placeholder="Pesquisar...">
-                <button type="submit">🔍</button>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="static/img/rojo.png" alt="Logo DASS">
             </div>
-            <div class="user-menu">
-                <img src="user-icon.png" alt="Usuário" class="user-icon">
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#flashcards">Flashcards</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="/quiz">Quiz</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre Lean</a></li>
-                <li><a href="#">Ferramentas Lean</a></li>
-                <li><a href="#">Casos de Sucesso</a></li>
-                <li><a href="#">Recursos Adicionais</a></li>
-            </ul>
-        </nav>
-        <main class="main-content">
-            <section class="hero">
-                <h1>O que é a Metodologia Lean?</h1>
-                <p>A metodologia Lean é uma abordagem de gestão que busca maximizar o valor para o cliente enquanto minimiza desperdícios. Originada na indústria de manufatura, ela é amplamente utilizada para melhorar processos e aumentar a eficiência em diversos setores.</p>
-            </section>
-            <section class="video-grid">
-                <div class="video-item">
-                    <img src="video-thumbnail.jpg" alt="Thumbnail do vídeo">
-                    <div class="video-info">
-                        <h3>Introdução ao Lean</h3>
-                        <p>Entenda os princípios básicos da metodologia Lean e como ela pode transformar sua organização.</p>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Descubra como otimizar a sua produção</h2>
+            <p>Evitando desperdícios e fazendo melhorias contínuas.</p>
+            <a href="#courses" class="btn">Venha conhecer mais sobre nós</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 style="font-size: 3em;">O que é o Lean?</h2>
+            <div class="about-content">
+                <p>Nosso objetivo é ajudar você a aprender novos idiomas de forma eficaz e divertida. Oferecemos uma variedade de cursos e recursos para todos os níveis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Nossos Cursos</h2>
+            <div class="course-list">
+                <div class="course">
+                    <img src="https://via.placeholder.com/300x200" alt="Curso de Inglês">
+                    <h3>Curso de Inglês</h3>
+                    <p>Aprenda inglês com um método comprovado e instrutores experientes.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+                <div class="course">
+                    <img src="https://via.placeholder.com/300x200" alt="Curso de Espanhol">
+                    <h3>Curso de Espanhol</h3>
+                    <p>Domine o espanhol com aulas interativas e recursos de alta qualidade.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+                <div class="course">
+                    <img src="https://via.placeholder.com/300x200" alt="Curso de Francês">
+                    <h3>Curso de Francês</h3>
+                    <p>Aprenda francês com um método inovador e professores nativos.</p>
+                    <a href="#" class="btn">Saiba Mais</a>
+                </div>
+                <!-- Adicione mais cursos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <section id="flashcards" class="flashcards">
+        <div class="container">
+            <h2>Quais são os 3 pilares do Lean?</h2>
+            <div class="flashcard-container">
+                <div class="flashcard">
+                    <div class="flashcard-content">
+                        <h3>Eliminação de desperdícios</h3>
+                        <p>Prévia dos principais termos e frases úteis para começar a conversar.</p>
                     </div>
                 </div>
-                <div class="video-item">
-                    <img src="video-thumbnail.jpg" alt="Thumbnail do vídeo">
-                    <div class="video-info">
-                        <h3>Ferramentas Lean</h3>
-                        <p>Explore as principais ferramentas utilizadas no Lean para melhorar processos e reduzir desperdícios.</p>
+                <div class="flashcard">
+                    <div class="flashcard-content">
+                        <h3>Qualidade</h3>
+                        <p>Conceitos fundamentais de gramática para construir frases corretas.</p>
                     </div>
                 </div>
-                <div class="video-item">
-                    <img src="video-thumbnail.jpg" alt="Thumbnail do vídeo">
-                    <div class="video-info">
-                        <h3>Casos de Sucesso</h3>
-                        <p>Veja exemplos de empresas que implementaram o Lean com sucesso e os resultados que obtiveram.</p>
+                <div class="flashcard">
+                    <div class="flashcard-content">
+                        <h3>Expressões Comuns</h3>
+                        <p>Frases e expressões que você encontrará no dia a dia.</p>
                     </div>
                 </div>
-                <!-- Adicione mais blocos de vídeo conforme necessário -->
-            </section>
-        </main>
-    </div>
+                <!-- Adicione mais flashcards conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>O que nossos alunos dizem</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>"O curso de inglês foi transformador! A metodologia é fantástica e o suporte é excelente."</p>
+                        <cite>- João Silva</cite>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>"Aprender espanhol nunca foi tão fácil e divertido. Recomendo para todos!"</p>
+                        <cite>- Maria Oliveira</cite>
+                    </div>
+                    <!-- Adicione mais depoimentos conforme necessário -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-navigation">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Projeto Seja Poliglota. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
