@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais Envolvidos</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Container centralizado */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seção Hero */
+        .hero {
+            background: url('imagens/d') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hero-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Seções */
+        section {
+            padding: 60px 0;
+        }
+
+        .about {
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 20px; /* Espaço entre os blocos */
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .about-content img {
+            width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+            border-radius: 5px;
+        }
+
+        .about-content div {
+            flex: 1;
+        }
+
+        /* Ajuste para garantir que os blocos de equipe tenham o mesmo espaçamento */
+        .about:nth-of-type(odd) {
+            background: #e9ecef; /* Cor alternativa para melhorar a visibilidade */
+        }
+
+        @media (min-width: 768px) {
+            .about {
+                margin: 20px 0; /* Espaçamento entre os blocos em telas maiores */
+            }
+        }
+
+        /* Títulos das seções */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Equipe de Projeto</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container quiz-section">
+        <h2 class="section-title">Conheça Nossa Equipe</h2>
+
+        <h3 class="section-title">Responsáveis pela Criação do Site</h3>
+        <div class="about">
+            <div class="about-content">
+                <img src="static/img/profissional1.jpg" alt="Profissional 1">
+                <div>
+                    <h3>João Silva</h3>
+                    <p>João é um especialista em desenvolvimento front-end com mais de 10 anos de experiência. Ele é responsável pela criação de interfaces de usuário modernas e responsivas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about-content">
+                <img src="static/img/profissional2.jpg" alt="Profissional 2">
+                <div>
+                    <h3>Maria Oliveira</h3>
+                    <p>Maria é uma experiente desenvolvedora back-end. Ela trabalha na construção e manutenção da lógica de servidores e bancos de dados, garantindo que tudo funcione sem problemas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about-content">
+                <img src="static/img/profissional3.jpg" alt="Profissional 3">
+                <div>
+                    <h3>Pedro Santos</h3>
+                    <p>Pedro é um especialista em UX/UI, focado em otimizar a experiência do usuário. Ele garante que os aplicativos sejam intuitivos e fáceis de usar.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">Responsáveis pela Criação do Conteúdo</h3>
+        <div class="about">
+            <div class="about-content">
+                <img src="static/img/profissional4.jpg" alt="Profissional 4">
+                <div>
+                    <h3>Ana Costa</h3>
+                    <p>Ana é uma gerente de projeto com vasta experiência em coordenação de equipes e planejamento de projetos. Ela mantém tudo nos trilhos e garante o sucesso do projeto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about-content">
+                <img src="static/img/profissional5.jpg" alt="Profissional 5">
+                <div>
+                    <h3>Lucas Pereira</h3>
+                    <p>Lucas é um analista de qualidade que realiza testes rigorosos para garantir que o produto final atenda aos padrões de qualidade e seja livre de bugs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
