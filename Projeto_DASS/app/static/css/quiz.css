@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container centralizado */
+.container {
+    width: 80%;
+    margin: 0 auto 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .logo h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent; /* Cria espaço para a linha */
+    transition: border-color 0.3s ease; /* Suaviza a transição */
+}
+
+nav ul li a:hover {
+    border-bottom-color: rgb(255, 255, 255); 
+    text-decoration: none;
+}
+
+/* Seção do Quiz */
+.quiz-section {
+    padding: 60px 0 1px;
+    background: #f4f4f4;
+}
+
+.quiz-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quiz-section .question {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.quiz-section .question p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.quiz-section .question label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.quiz-section .btn {
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.quiz-section .btn:hover {
+    background: #0056b3;
+}
+
+li {
+    text-align: center;
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+}
+
+label {
+    border-radius: 25px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555; /* Cor do texto das opções */
+}

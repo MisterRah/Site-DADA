@@ -51,13 +51,16 @@
         }
 
         nav ul li a {
+            border-bottom: 2px solid transparent; /* Cria espaço para a linha */
+            transition: border-color 0.3s ease; /* Suaviza a transição */
             color: #fff;
             text-decoration: none;
             font-weight: bold;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            border-bottom-color: rgb(255, 255, 255); 
+            text-decoration: none;
         }
 
         /* Seção Hero */
@@ -101,6 +104,7 @@
         }
 
         .about {
+            border-radius: 20px;
             background: #f4f4f4;
             padding: 20px;
             margin-bottom: 20px; /* Espaço entre os blocos */
@@ -109,13 +113,14 @@
         .about-content {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 40px;
         }
 
         .about-content img {
             width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
             height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-            border-radius: 5px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .about-content div {
@@ -136,8 +141,15 @@
         /* Títulos das seções */
         .section-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 60px 0 40px;
+            font-size: 25px;
         }
+
+        .section-title-h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+        
     </style>
 </head>
 <body>
@@ -156,14 +168,14 @@
         </div>
     </header>
     <section class="container quiz-section">
-        <h2 class="section-title">Conheça Nossa Equipe</h2>
+        <h2 class="section-title-h2">Conheça Nossa Equipe</h2>
 
         <h3 class="section-title">Responsáveis pela Criação do Site</h3>
         <div class="about">
             <div class="about-content">
-                <img src="static/img/profissional1.jpg" alt="Profissional 1">
+                <img src="https://i.pinimg.com/564x/41/e2/40/41e240004e0b3c0305411e70f88c45a6.jpg" alt="Profissional 1">
                 <div>
-                    <h3>João Silva</h3>
+                    <h3>Biel das Milfs</h3>
                     <p>João é um especialista em desenvolvimento front-end com mais de 10 anos de experiência. Ele é responsável pela criação de interfaces de usuário modernas e responsivas.</p>
                 </div>
             </div>
@@ -171,9 +183,9 @@
 
         <div class="about">
             <div class="about-content">
-                <img src="static/img/profissional2.jpg" alt="Profissional 2">
+                <img src="https://i.pinimg.com/564x/40/64/15/40641574f1fc6ebb0013766a44953c83.jpg" alt="Profissional 2">
                 <div>
-                    <h3>Maria Oliveira</h3>
+                    <h3>Ramon da Cocaína</h3>
                     <p>Maria é uma experiente desenvolvedora back-end. Ela trabalha na construção e manutenção da lógica de servidores e bancos de dados, garantindo que tudo funcione sem problemas.</p>
                 </div>
             </div>
@@ -181,9 +193,9 @@
 
         <div class="about">
             <div class="about-content">
-                <img src="static/img/profissional3.jpg" alt="Profissional 3">
+                <img src="https://i.pinimg.com/564x/28/1a/af/281aaf73c5b37d8be3b0ed20caade1c9.jpg" alt="Profissional 3">
                 <div>
-                    <h3>Pedro Santos</h3>
+                    <h3>Kevin cheirador de café</h3>
                     <p>Pedro é um especialista em UX/UI, focado em otimizar a experiência do usuário. Ele garante que os aplicativos sejam intuitivos e fáceis de usar.</p>
                 </div>
             </div>
@@ -192,9 +204,9 @@
         <h3 class="section-title">Responsáveis pela Criação do Conteúdo</h3>
         <div class="about">
             <div class="about-content">
-                <img src="static/img/profissional4.jpg" alt="Profissional 4">
+                <img src="https://i.pinimg.com/564x/59/f7/fd/59f7fd15f3ed0b201320425eac0deb05.jpg" alt="Profissional 4">
                 <div>
-                    <h3>Ana Costa</h3>
+                    <h3>Sra. Thay</h3>
                     <p>Ana é uma gerente de projeto com vasta experiência em coordenação de equipes e planejamento de projetos. Ela mantém tudo nos trilhos e garante o sucesso do projeto.</p>
                 </div>
             </div>
@@ -202,9 +214,9 @@
 
         <div class="about">
             <div class="about-content">
-                <img src="static/img/profissional5.jpg" alt="Profissional 5">
+                <img src="https://i.pinimg.com/736x/9b/a8/dc/9ba8dc20234f5b385411864d61d978cc.jpg" alt="Profissional 5">
                 <div>
-                    <h3>Lucas Pereira</h3>
+                    <h3>Sra. Kayla</h3>
                     <p>Lucas é um analista de qualidade que realiza testes rigorosos para garantir que o produto final atenda aos padrões de qualidade e seja livre de bugs.</p>
                 </div>
             </div>
