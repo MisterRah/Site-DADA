@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - DASS-Lean</title>
+    <link rel="stylesheet" href="static/css/kanban.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="static/img/rojo.png" alt="Logo DASS">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#flashcards">Flashcards</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="/quiz">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text-container">
+                <h2>Kanban</h2>
+                <p>Entenda como o Kanban pode revolucionar sua gestão de projetos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kanban" class="kanban">
+        <div class="container">
+            <h2>O que é Kanban?</h2>
+            <p>O Kanban é uma metodologia de gestão visual de trabalho que visa melhorar o fluxo de trabalho e a eficiência dos processos. Desenvolvido no Japão, o Kanban utiliza cartões visuais e quadros para representar o progresso das tarefas e facilitar a comunicação dentro das equipes.</p>
+            <h3>Principais Componentes:</h3>
+            <ul>
+                <li><strong>Quadro Kanban:</strong> Um quadro dividido em colunas que representam diferentes etapas do processo de trabalho.</li>
+                <li><strong>Cartões:</strong> Cartões que representam tarefas ou itens de trabalho, movidos pelas colunas do quadro.</li>
+                <li><strong>Limites de WIP (Work In Progress):</strong> Restrições sobre a quantidade de trabalho em cada coluna para evitar sobrecarga.</li>
+                <li><strong>Reuniões Regulares:</strong> Reuniões para revisar o progresso e ajustar o fluxo de trabalho conforme necessário.</li>
+            </ul>
+            <p>O Kanban promove uma abordagem incremental e contínua para melhorar a eficiência, reduzindo o desperdício e permitindo uma melhor visualização do progresso dos projetos.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DASS-Lean. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true,
+        });
+    </script>
+</body>
+</html>
