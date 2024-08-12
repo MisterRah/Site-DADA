@@ -22,7 +22,8 @@
         /* Container centralizado */
         .container {
             width: 80%;
-            margin: 0 auto;
+            margin: 0 auto 80px;
+            border-radius: 20px;
             overflow: hidden;
         }
 
@@ -53,15 +54,18 @@
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            border-bottom: 2px solid transparent; /* Cria espaço para a linha */
+            transition: border-color 0.3s ease; /* Suaviza a transição */
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            border-bottom-color: rgb(255, 255, 255); 
+            text-decoration: none;
         }
 
         /* Seção do Quiz */
         .quiz-section {
-            padding: 60px 0;
+            padding: 60px 0 1px;
             background: #f4f4f4;
         }
 
@@ -89,8 +93,12 @@
         }
 
         .quiz-section .btn {
-            display: inline;
+            align-items: center;
+            margin: 10px;
+            justify-content: center;
+            display: flex;
             width: 200px;
+            height: 50px;
             margin: 0 auto;
             background: #007BFF;
             color: #fff;
@@ -127,15 +135,13 @@
             <nav>
                 <ul>
                     <li><a href="/">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <section class="container quiz-section">
         <h2>Quiz sobre Ramon Menezes</h2>
         <form id="quiz-form-1" class="quiz-form">
@@ -150,6 +156,9 @@
             <button type="submit" class="btn">Responder</button>
             <br><br>
         </form>
+    </section>
+
+    <section class="container quiz-section">
         <form id="quiz-form-2" class="quiz-form">
             <div class="question">
                 <img style="display: block; margin:auto" src="static/img/600400.png">
@@ -163,6 +172,9 @@
             <br>
             <br>
         </form>
+    </section>
+
+    <section class="container quiz-section">
         <form id="quiz-form-3" class="quiz-form">
             <div class="question">
                 <img style="display: block; margin:auto" src="static/img/600400.png">
@@ -176,6 +188,9 @@
             <br>
             <br>
         </form>
+    </section>
+
+    <section class="container quiz-section">
         <form id="quiz-form-4" class="quiz-form">
             <div class="question">
                 <img style="display: block; margin:auto" src="static/img/600400.png">
@@ -189,6 +204,9 @@
             <br>
             <br>
         </form>
+    </section>
+        
+    <section class="container quiz-section">
         <form id="quiz-form-5" class="quiz-form">
             <div class="question">
                 <img style="display: block; margin:auto" src="static/img/600400.png">
