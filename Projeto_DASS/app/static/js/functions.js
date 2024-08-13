@@ -49,3 +49,33 @@ function setupQuiz(formId, correctAnswers) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', () => {
+const forms = document.querySelectorAll('.quiz-form');
+
+forms.forEach(form => {
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Previne o envio do formulário
+        
+        const formData = new FormData(form);
+        const correctAnswers = {
+            q1: 'c', // Resposta correta para a pergunta 1
+            q2: 'c'  // Resposta correta para a pergunta 2
+        };
+
+        form.querySelectorAll('label').forEach(label => {
+            label.classList.remove('correct', 'incorrect'); // Remove classes anteriores
+        });
+
+        formData.forEach((value, key) => {
+            const correctAnswer = correctAnswers[key];
+            const selectedLabel = form.querySelector(`input[name="${key}"][value="${value}"]).closest('label'`);
+            
+            if (value === correctAnswer) {
+                selectedLabel.classList.add('correct');
+            } else {
+                selectedLabel.classList.add('incorrect');
+            }
+        });
+    });
+});
+});

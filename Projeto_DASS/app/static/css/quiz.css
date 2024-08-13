@@ -15,7 +15,7 @@ body {
 /* Container centralizado */
 .container {
     width: 80%;
-    margin: 40px auto;
+    margin: 20px auto;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -120,4 +120,140 @@ label {
     margin-bottom: 10px;
     font-size: 16px;
     color: #555; /* Cor do texto das opções */
+}
+
+/* Esconder o checkbox padrão */
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  /* Estilo para o label que será o checkbox customizado */
+  .custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Estilo quando o checkbox está marcado */
+  input[type="radio"]:checked + .custom-checkbox {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+
+  /* Estilo para o ícone de verificação */
+  .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+    border-radius: 2px;
+  }
+
+  /* Mostrar o ícone de verificação quando o checkbox está marcado */
+  input[type="radio"]:checked + .custom-checkbox::after {
+    transform: translate(-50%, -50%) scale(1);
+  }
+ /* Estilo para o label */
+label {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a caixa */
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 25px;
+    padding: 10px; /* Padding geral no label */
+}
+
+/* Estilo para a caixa customizada */
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+    margin-right: 10px; /* Espaço entre a caixa e o texto */
+    vertical-align: middle; /* Alinha verticalmente a caixa com o texto */
+}
+
+/* Adiciona um padding interno no label para garantir que o texto não fique colado à caixa */
+label {
+    padding-left: 30px; /* Ajuste este valor conforme necessário */
+}
+
+/* Estilo quando o checkbox está marcado*/
+input[type="radio"]:checked + .custom-checkbox {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/* Estilo para o ícone de verificação */
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+    border-radius: 2px;
+}
+
+/* Mostrar o ícone de verificação quando o checkbox está marcado */
+input[type="radio"]:checked + .custom-checkbox::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Estilo para rótulos corretos e incorretos */
+label.correct {
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+    color: #155724;
+}
+
+label.incorrect {
+    background-color: #f8d7da;
+    border: 2px solid #f5c6cb;
+    color: #721c24;
+}
+
+label.correct, label.incorrect {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.correct span.custom-checkbox {
+    background-color: #c3e6cb;
+    border-color: #c3e6cb;
+}
+
+.incorrect span.custom-checkbox {
+    background-color: #f5c6cb;
+    border-color: #f5c6cb;
+}
+
+/* Estilo para os parágrafos como títulos */
+.question p {
+    font-size: 1.5em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Define a fonte como negrito */
+    margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
+    color: #333; /* Cor do texto */
+    text-align: left; /* Centraliza o texto */
+    padding-bottom: 10px; /* Espaçamento interno abaixo do texto para a linha */
+    border-radius: 5px; /* Cantos arredondados para a área de fundo */
+    margin-left: 25px;
 }
