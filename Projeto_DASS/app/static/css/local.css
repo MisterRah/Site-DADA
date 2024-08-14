@@ -26,9 +26,14 @@ body {
 
 /* Cabeçalho */
 header {
-    background: linear-gradient(to right, #16191f, #4c5564);
+    width: 100%;
+    height: 90px;
+    z-index: 1000; /* Mantém o menu acima dos outros elementos */
+    position:fixed; /* Manten o elemento fixado */
+    background: linear-gradient(to right, #ffffff, #ffffff);
     color: #fff;
     padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header .container {
@@ -38,13 +43,13 @@ header .container {
 }
 
 header .logo {
-    background-color: #f5f5f5; /* Alterado para uma cor neutra */
+    background-color: #ffffff; /* Alterado para uma cor neutra */
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 header .logo img {
-    width: 150px;
+    width: 125px;
     height: auto;
 }
 
@@ -60,16 +65,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+    border-bottom: 2px solid transparent; /* Cria espaço para a linha */
+    transition: border-color 0.3s ease; /* Suaviza a transição */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: red;
+    border-bottom-color: red; 
+    text-decoration: none;
 }
-
 /* Seção Hero */
 .hero {
     background: url('../img/metodo-lean.webp') no-repeat center center/cover;
