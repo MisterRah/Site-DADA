@@ -15,7 +15,7 @@ body {
 /* Container centralizado */
 .container {
     width: 80%;
-    margin:  auto;
+    margin: auto;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -70,11 +70,13 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
-    border-bottom: 2px solid transparent; /* Cria espaço para a linha */
-    transition: border-color 0.3s ease; /* Suaviza a transição */
+    border-bottom: 3px solid transparent; /* Cria espaço para a linha */
+    transition: border-color 0.4s ease; /* Suaviza a transição */
 }
 
 nav ul li a:hover {
+    transition: 0.4s ease; /* Suaviza a transição */
+    color: red;
     border-bottom-color: rgb(255, 0, 0); 
     text-decoration: none;
 }
@@ -123,7 +125,13 @@ section {
     border-radius: 20px;
     background: #f4f4f4;
     padding: 20px;
-    margin-bottom: 20px; /* Espaço entre os blocos */
+    margin: 30px; /* Espaço entre os blocos */
+}
+
+.about:hover {
+    background: #f4f4f4; /* Muda a cor de fundo */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transform: scale(1.01); /* Aumenta levemente o tamanho */
 }
 
 .about-content {
@@ -150,13 +158,13 @@ section {
 
 @media (min-width: 768px) {
     .about {
-        margin: 20px 0; /* Espaçamento entre os blocos em telas maiores */
+        margin: 30px; /* Espaçamento entre os blocos em telas maiores */
     }
 }
 
 /* Títulos das seções */
 .section-title {
-    text-align: center;
+    text-align: left;
     margin: 60px 0 40px;
     font-size: 25px;
 }
@@ -166,3 +174,4 @@ section {
     text-align: center;
     font-size: 40px;
 }
+
