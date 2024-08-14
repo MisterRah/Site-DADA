@@ -10,7 +10,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(to top, #001f3f, #003366);
+    background: linear-gradient(to top, #ffffff, #ffffff);
     min-height: 100vh;
     padding: 0;
     overflow-x: hidden;
@@ -81,7 +81,7 @@ nav ul li a:hover {
 
 /* Seção Hero */
 .hero {
-    background: url('../img/metodo-lean.webp') no-repeat center center/cover;
+    background: url('../img/poka_yoke.png.PNG') no-repeat center center/cover;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 .hero-content {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 90px auto 0;
 }
 
 /* Novo container para o texto */

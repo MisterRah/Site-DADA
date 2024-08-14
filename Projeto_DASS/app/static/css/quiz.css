@@ -51,9 +51,7 @@ header .logo img {
     height: auto;
 }
 
-nav {
-    margin:0 40px;
-}
+
 
 nav ul {
     list-style: none;
@@ -151,6 +149,7 @@ nav ul li a:hover {
     text-align: center;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .quiz-section .btn:hover {

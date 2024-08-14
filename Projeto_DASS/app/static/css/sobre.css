@@ -50,10 +50,6 @@ header .logo img {
     height: auto;
 }
 
-nav {
-    margin:0 40px;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -126,12 +122,14 @@ section {
     background: #f4f4f4;
     padding: 20px;
     margin: 30px; /* Espaço entre os blocos */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .about:hover {
-    background: #f4f4f4; /* Muda a cor de fundo */
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-    transform: scale(1.01); /* Aumenta levemente o tamanho */
+    background: #ebf3ff; /* Muda a cor de fundo */
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    transform: scale(1.03); /* Aumenta levemente o tamanho */
 }
 
 .about-content {
@@ -151,10 +149,6 @@ section {
     flex: 1;
 }
 
-/* Ajuste para garantir que os blocos de equipe tenham o mesmo espaçamento */
-.about:nth-of-type(odd) {
-    background: #e9ecef; /* Cor alternativa para melhorar a visibilidade */
-}
 
 @media (min-width: 768px) {
     .about {
@@ -175,3 +169,26 @@ section {
     font-size: 40px;
 }
 
+.div-blocos {
+    display: flex;
+    margin: 60px 0;
+}
+
+.div-bloco1 {
+    height: 6px;
+    width: 30%;
+    background: linear-gradient(to right, #ffd04f, #ff9340);
+    margin: 0 auto;
+}
+
+.div-bloco2 {
+    height: 6px;
+    width: 30%;
+    background: linear-gradient(to right, #a44fff, #4079ff);
+    margin: 0 auto;
+}
+
+.div-bloco1, .div-bloco2 {
+    flex: 1; /* As divs vão compartilhar o espaço disponível igualmente */
+    margin: 0; 
+}

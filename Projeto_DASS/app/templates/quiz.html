@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz de 10 Perguntas</title>
     <link rel="stylesheet" href="static/css/quiz.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 
 <body style="background: url('static/img/fundo.jpg')">
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
         <div class="container">
             <div class="logo">
                 <a href="/"><img src="static/img/rojo.png" alt="Logo DASS"></a>
@@ -17,9 +29,7 @@
             <nav>
                 <ul>
                     <li><a href="/">Início</a></li>
-                    <li><a href="#">Cursos</a></li>
-                    <li><a href="#flashcards">Flashcards</a></li>
-                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="/#courses">Cursos</a></li>
                     <li><a href="/quiz">Quiz</a></li>
                     <li><a href="/sobre">Sobre Nós</a></li>
                 </ul>
@@ -107,5 +117,6 @@
     </section>
 
     <script src="static/js/functions.js"></script>
+    <script src="static/js/flash.js"></script>
 </body>
 </html>

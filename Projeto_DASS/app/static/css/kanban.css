@@ -81,7 +81,7 @@ nav ul li a:hover {
 
 /* Seção Hero */
 .hero {
-    background: url('../img/Gestão_visual.png.PNG') no-repeat center center/cover;
+    background: url('../img/kanban.png.PNG') no-repeat center center/cover;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 .hero-content {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 90px auto 0;
 }
 
 /* Novo container para o texto */

@@ -8,6 +8,7 @@ def inicio():
 
 @app.route("/quiz")
 def quiz():
+    flash("Boa Sorte nas perguntas", "success")
     return render_template("quiz.html")
 @app.route("/poka")
 def poka():
