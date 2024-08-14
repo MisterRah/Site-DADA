@@ -1,7 +1,9 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, flash
 app =  Flask(__name__)
+app.secret_key = 'capintaoAmerica'  
 @app.route("/")
 def inicio():
+    flash("Bem-vindo ao nosso site. Aproveite o conteudo" , 'success')
     return render_template("index.html")
 
 @app.route("/quiz")

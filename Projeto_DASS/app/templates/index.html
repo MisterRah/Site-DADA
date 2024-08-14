@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dass-lean</title>
     <link rel="stylesheet" href="static/css/text.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 <body>
+
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
         <div class="container">
             <div class="logo">
                 <img src="static/img/rojo.png" alt="Logo DASS">
@@ -41,25 +54,25 @@
             <h2>Temas: </h2><br>
             <div class="course-list">
                 <div class="course">
-                    <img src="https://via.placeholder.com/300x200" alt="Curso de Inglês">
+                    <img src="static/img/gestao.jpg" alt="Curso de Inglês">
                     <h3>Gestão visual</h3>
                     <p>Entenda a importância da gestão visual para um controle efetivo de processos e projetos.</p><br>
                     <a href="gestao" class="btn">Saiba Mais</a>
                 </div>
                 <div class="course">
-                    <img src="https://via.placeholder.com/300x200" alt="Curso de Espanhol">
+                    <img src="static/img/poka.jfif" alt="Curso de Espanhol">
                     <h3>Poka Yoke</h3>
                     <p>Domine o espanhol com aulas interativas e recursos de alta qualidade.</p><br>
                     <a href="poka" class="btn">Saiba Mais</a>
                 </div>
                 <div class="course">
-                    <img src="https://via.placeholder.com/300x200" alt="Curso de Francês">
+                    <img src="static/img/kanban.jpg" alt="Kanban">
                     <h3>Kanban</h3>
                     <p>Aprenda francês com um método inovador e professores nativos.</p><br>
                     <a href="kanban" class="btn">Saiba Mais</a>
                 </div>
                 <div class="course">
-                    <img src="https://via.placeholder.com/300x200" alt="Curso de Francês">
+                    <img src="static/img/Um local de trabalho autoexplicativo.png.PNG" alt="Curso de Francês">
                     <h3>Um local de trabalho autoexplicativo</h3>
                     <p>Aprenda francês com um método inovador e professores nativos.</p><br>
                     <a href="local" class="btn">Saiba Mais</a>
@@ -69,58 +82,9 @@
         </div>
     </section>
 
-    <section id="flashcards" class="flashcards">
-        <div class="container">
-            <h2>Quais são os 3 pilares do Lean?</h2><br>
-            <div class="flashcard-container">
-                <div class="flashcard">
-                    <div class="flashcard-content">
-                        <h3>Jidoka</h3>
-                        <p>Significa que, em caso de problema ou defeito, o trabalho é imediatamente interrompido.</p>
-                    </div>
-                </div>
-                <div class="flashcard">
-                    <div class="flashcard-content">
-                        <h3>Just-in-Time</h3>
-                        <p>O objetivo é reduzir estoques e eliminar o desperdício, entregando o que é necessário, quando é necessário.</p>
-                    </div>
-                </div>
-                <div class="flashcard">
-                    <div class="flashcard-content">
-                        <h3>Melhoria Contínua</h3>
-                        <p>Todos são responsáveis por sugerir e implementar melhorias em suas áreas de atuação.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>Depoimentos</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <p>"Excelente plataforma! Aprendi muito e os recursos são incríveis."</p>
-                        <cite>- João Silva</cite>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>"Os cursos são bem estruturados e fáceis de acompanhar. Recomendo a todos!"</p>
-                        <cite>- Maria Oliveira</cite>
-                    </div>
-                    <div class="swiper-slide">
-                        <p>"A melhor experiência de aprendizado que já tive. Vale a pena cada centavo!"</p>
-                        <cite>- Carlos Santos</cite>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
-            <p>&copy; 2024 DASS-Lean. Todos os direitos reservados.</p>
+            <p>&copy; 2024 SoftKira. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -134,5 +98,7 @@
             loop: true,
         });
     </script>
+    <script src="static/js/flash.js"></script>
+
 </body>
 </html>
