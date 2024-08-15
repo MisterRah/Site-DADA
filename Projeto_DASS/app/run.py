@@ -25,4 +25,3 @@ def local():
 @app.route("/sobre")
 def sobre():
     return render_template("sobre.html")
-app.run(debug=True)
