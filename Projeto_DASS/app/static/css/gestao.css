@@ -148,6 +148,56 @@ nav ul li a:hover {
     max-width: 800px;
 }
 
+.bloco_next {
+    height: 90px;
+    width: 100%;
+    background: #ededed;
+    margin: 0 auto;
+}
+
+.bloco_next a {
+    color: inherit; /* Remove a cor padrão do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: inherit; /* Remove a negrito, se houver */
+}
+
+.next1 {
+    margin: 20px;
+    margin-left: 20px;
+    position: absolute; /* ou fixed */
+    left: 0;
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.next2 {
+    margin-top: 20px ;
+    margin-right: 20px;
+    position: absolute; /* ou fixed */
+    right: 0;
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.next1:hover {
+    transform: scale(1.05);
+}
+
+.next2:hover {
+    transform: scale(1.05);
+}
+
 /* Footer */
 footer {
     background: linear-gradient(to bottom, #333, #1a1a1a);

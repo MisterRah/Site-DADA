@@ -107,6 +107,7 @@ nav ul li a:hover {
 }
 
 .btn {
+    font-style: none;
     display: inline-block;
     margin-top: 10px;
     background: #007bff;
