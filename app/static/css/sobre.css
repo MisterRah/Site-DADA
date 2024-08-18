@@ -181,7 +181,7 @@ section {
 }
 
 .about:hover {
-    background: #ebf3ff; /* Muda a cor de fundo */
+    background: #e2edff; /* Muda a cor de fundo */
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
     transform: scale(1.03); /* Aumenta levemente o tamanho */
 }
@@ -203,7 +203,6 @@ section {
     flex: 1;
 }
 
-
 @media (min-width: 768px) {
     .about {
         margin: 30px; /* Espaçamento entre os blocos em telas maiores */
@@ -213,7 +212,7 @@ section {
 /* Títulos das seções */
 .section-title {
     text-align: left;
-    margin: 60px 0 40px;
+    margin: 60px 0 40px 30px;
     font-size: 25px;
 }
 
@@ -229,14 +228,14 @@ section {
 }
 
 .div-bloco1 {
-    height: 6px;
+    height: 8px;
     width: 30%;
     background: linear-gradient(to right, #ffd04f, #ff9340);
     margin: 0 auto;
 }
 
 .div-bloco2 {
-    height: 6px;
+    height: 8px;
     width: 30%;
     background: linear-gradient(to right, #a44fff, #4079ff);
     margin: 0 auto;
