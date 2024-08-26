@@ -1,61 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Corpo */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Container centralizado */
-.container {
-    width: 80%;
-    margin: auto;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-/* Cabeçalho */
 header {
     z-index: 1000;
-    padding: 15px 0;
+    position: fixed;
     width: 100%;
-    height: 90px;
-    position:fixed; /* Manten o elemento fixado */
-    background: linear-gradient(to right, #ffffff, #ffffff);
-    color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header .container {
-    margin-bottom: 100px;
-    height: 100px;
-    width: 90%;
+/* Seção Hero */
+.hero {
+    width: 100%;
+    background: url('../img/kanban.png.PNG') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 90px auto 0;
+}
+
+/* Novo container para o texto */
+.hero-text-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Seção About */
+.about {
+    width: 100%;
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+    color: #333;
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.about .about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .about-content p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.bloco_next {
+    justify-content: space-between;
+    align-items: center;
+    display: flex ;
+    height: 90px;
+    width: 100%;
+    background: #ededed;
+    margin: 0 auto;
+}
+
+.btn_next {
+    margin: 20px;
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn_next br {
+    display: none;
+}
+
+.btn_next:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.nav-bar {
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
+    padding: 45px;
+}
+
+.nav-list {
+    display: flex;
     align-items: center;
 }
 
-header .logo {
-    left: 5%;
-    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
-    top: 15px;  /* Distância do topo da janela */
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
+.nav-list ul {
+    top: 35px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-header .logo img {
-    width: 125px;
-    height: auto;
+.nav-item a {
+    margin: 0 15px;
+}
+
+
+.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #000000;
+
 }
 
 nav ul {
+    font-weight: bold;
     right: 5%;
     position: fixed; 
     justify-content: right;
@@ -66,11 +163,11 @@ nav ul {
     gap: 20px;
 }
 
+
 nav ul li a {
     color: #333;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 1.15rem;
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
@@ -99,6 +196,7 @@ nav ul li.submenu ul {
 nav ul li.submenu ul li {
     margin: 0;
     padding: 0;
+    /* Remova display: none; */
 }
 
 nav ul li.submenu ul li a {
@@ -111,14 +209,55 @@ nav ul li.submenu ul li a {
     transition: background 0.1s ease;
 }
 
+nav ul li.submenu:hover ul {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block; /* Exibe o submenu ao passar o mouse */
+}
+
 nav ul li.submenu ul li a:hover {
     color: white;
     background: #007bff;
 }
 
-nav ul li.submenu:hover ul {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block; /* Exibe o submenu ao passar o mouse */
+
+.logo {
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+    top: 15px;;  /* Distância do topo da janela */
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+}
+
+
+.mobile-menu-icon {
+    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+    right: 5%;
+    top: 10px;  /* Distância do topo da janela */
+    width: 25px;
+    height: auto;
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu .sub-menu {
+    text-decoration: none;
+    color: #000000;
+    display: none;
 }
 
 .menu a{
@@ -131,116 +270,18 @@ nav ul li.submenu:hover ul {
     border-bottom-color: #007bff;
 }
 
-
-/* Seção Hero */
-.hero {
-    background: url('../img/kanban.png.PNG') no-repeat center center/cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 100px 20px;
-    height: 100vh;
-    position: relative;
+.container {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 80%;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 90px auto 0;
+section{
+    padding-top: 80px;
+    width: 80%;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
-/* Novo container para o texto */
-.hero-text-container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.hero-text-container h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.hero-text-container p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* Botão */
-.btn {
-    background: #ff5722;
-    color: #fff;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn:hover {
-    background: #e64a19;
-    transform: scale(1.05);
-}
-
-/* Seções */
-section {
-    padding: 80px 0;
-}
-
-.kanban {
-    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
-    color: #333;
-}
-
-.kanban h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.kanban p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.kanban ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-.kanban ul li {
-    margin-bottom: 10px;
-}
-
-.bloco_next {
-    justify-content: space-between;
-    align-items: center;
-    display: flex ;
-    height: 90px;
-    width: 100%;
-    background: #ededed;
-    margin: 0 auto;
-}
-
-.btn_next {
-    margin: 20px;
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn_next:hover {
-    background: #0056b3;
-    transform: scale(1.05);
-}
-
+/* Footer */
 footer {
     background: linear-gradient(to bottom, #333, #1a1a1a);
     color: #fff;
@@ -248,3 +289,130 @@ footer {
     padding: 20px 0;
     font-size: 14px;
 }
+
+@media screen and (max-width: 730px) {
+    
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content {
+        max-width: 70%;
+        margin: 45px auto 0;
+    }
+    
+    /* Novo container para o texto */
+    .hero-text-container {
+        background: #00000099;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+    .hero-text-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-text-container p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+
+    .logo {
+        display: flex;
+        align-items: center;
+        left: 5%;
+        position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+        top: 5px;  /* Distância do topo da janela */
+        background-color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    
+    .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-list ul {
+        display: none;
+    }
+    
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .icon {
+        width: 25px;
+        height: auto;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+    }
+    .mobile-menu .nav-item {
+   
+        display: block;
+        padding: 1rem 0;
+    
+    }
+
+    .open {
+        display: block;
+    }
+
+    .mobile-menu .sub-menu.open {
+        padding: 0;
+        display: grid;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .sub-menu ul {
+        text-align: left;
+        margin: 10px 10px;
+    } 
+
+    .sub-menu li {
+        margin-left: 0;
+        text-align: left;
+        list-style-type: none; 
+        padding: 8px 0;
+    } 
+
+    .sub-menu a {
+        color: #000000;;
+        padding: 10 0px;
+        text-decoration: none;
+    }
+
+    .btn_next {        
+        text-align: center; /* Certifique-se de que o texto fique centralizado */
+
+    }
+    
+    .btn_next br {
+        display: block;
+    }
+
+}
+
+
+

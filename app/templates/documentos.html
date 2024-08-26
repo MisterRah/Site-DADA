@@ -7,31 +7,54 @@
     <link rel="stylesheet" href="static/css/documentos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
+
 <body>
     <header>
-        <div >
+        <nav class="nav-bar">
             <div class="logo">
                 <a href="/"><img src="static/img/rojo.png" alt="Logo DASS"></a>
             </div>
-            <nav>
+            <div class="nav-list">
+                <nav>
+                    <ul>
+                        <li class="menu"><a href="#" class="nav-link">Início</a></li>
+                        <li class="menu"><a href="#" class="nav-link">Projetos</a></li>
+                        <li class="submenu"><a href="#">Temas</a>
+                            <ul>
+                                <li><a href="/gestao">Gestão Visual</a></li>
+                                <li><a href="/poka">Poka Yoke</a></li>
+                                <li><a href="/kanban">Kanban</a></li>
+                                <li><a href="/local">Local Autoexplicativo</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu"><a href="#" class="nav-link"> Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="static/img/menu_black.png" alt=""></button>
+            </div>
+        </nav>
+
+            <div class="mobile-menu">
                 <ul>
-                    <li class="menu"><a href="/">Início</a></li>
-                    <li class="submenu"><a href="/#courses">Temas</a>
-                        <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                    <!-- Lista de Temas com sublista ocultável -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="toggleSubMenu(event)">Temas</a>
+                        <ul class="sub-menu">
                             <li><a href="/gestao">Gestão Visual</a></li>
                             <li><a href="/poka">Poka Yoke</a></li>
                             <li><a href="/kanban">Kanban</a></li>
                             <li><a href="/local">Local Autoexplicativo</a></li>
                         </ul>
                     </li>
-                    <li class="menu"><a href="/quiz">Quiz</a></li>
-                    <li class="menu"><a href="/sobre">Sobre Nós</a></li>
-                    <li class="menu"><a href="/documentos">Documentos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
     </header>
-
     <section id="about" class="about">
         <div class="hero">
             <img src="static/img/600400.png">
@@ -78,15 +101,7 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            loop: true,
-        });
-    </script>
+
+    <script src="static/js/barra_menu.js"></script>
 </body>
 </html>
