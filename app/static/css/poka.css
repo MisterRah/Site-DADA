@@ -16,6 +16,17 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.container {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 80%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
 /* Seção Hero */
 .hero {
     width: 100%;
@@ -138,7 +149,15 @@ header {
     list-style: none;
 }
 
+.nav-item {
+    font-size: 1.15rem;
+}
+
 .nav-item a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
     margin: 0 15px;
 }
 
@@ -148,7 +167,6 @@ header {
     text-decoration: none;
     font-size: 1.15rem;
     color: #000000;
-
 }
 
 nav ul {
@@ -231,11 +249,14 @@ nav ul li.submenu ul li a:hover {
     border-radius: 5px;
 }
 
+.logo a{
+    margin: 0;
+}
+
 .logo img {
     width: 125px;
     height: auto;
 }
-
 
 .mobile-menu-icon {
     position: fixed; /* O elemento será posicionado em relação à janela do navegador */
@@ -268,11 +289,6 @@ nav ul li.submenu ul li a:hover {
 .menu:hover {
     color: #007bff;
     border-bottom-color: #007bff;
-}
-
-.container {
-    margin: 0 auto; /* Centraliza horizontalmente */
-    width: 80%;
 }
 
 section{

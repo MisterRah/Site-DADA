@@ -1,4 +1,3 @@
-/* Reset básico */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
 
 /* Reset básico */
@@ -9,27 +8,28 @@
     font-family: 'Inter', sans-serif;
 }
 
-
-/* Corpo */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Container centralizado */
-.container {
-    margin: 0 auto; /* Centraliza horizontalmente */
-    width: 80%;
-}
-
-/* Cabeçalho */
 header {
     z-index: 1000;
     position: fixed;
     width: 100%;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+    top: 15px;;  /* Distância do topo da janela */
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
 }
 
 .nav-bar {
@@ -51,10 +51,17 @@ header {
     list-style: none;
 }
 
-.nav-item a {
-    margin: 0 15px;
+.nav-item {
+    font-size: 1.15rem;
 }
 
+.nav-item a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+}
 
 .nav-link {
     font-weight: bold;
@@ -132,24 +139,6 @@ nav ul li.submenu ul li a:hover {
     background: #007bff;
 }
 
-
-.logo {
-    display: flex;
-    align-items: center;
-    left: 5%;
-    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
-    top: 15px;;  /* Distância do topo da janela */
-    background-color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.logo img {
-    width: 125px;
-    height: auto;
-}
-
-
 .mobile-menu-icon {
     position: fixed; /* O elemento será posicionado em relação à janela do navegador */
     right: 5%;
@@ -183,29 +172,6 @@ nav ul li.submenu ul li a:hover {
     border-bottom-color: #007bff;
 }
 
-/* Seção Hero */
-.hero {
-    background: url('imagens/d') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.hero-content h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
 .btn {
     background: #007BFF;
     color: #fff;
@@ -213,16 +179,13 @@ nav ul li.submenu ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
 }
-
 .btn:hover {
     background: #0056b3;
 }
-
 /* Seções */
 section {
     padding: 60px 0;
 }
-
 .about {
     border-radius: 20px;
     background: #f4f4f4;
@@ -233,75 +196,28 @@ section {
 }
 
 .about:hover {
+    background: #ebf3ff; /* Muda a cor de fundo */
     background: #e2edff; /* Muda a cor de fundo */
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
     transform: scale(1.03); /* Aumenta levemente o tamanho */
 }
-
 .about-content {
     display: flex;
     align-items: center;
     gap: 40px;
 }
-
 .about-content img {
     width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
     height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
     border-radius: 50%;
     object-fit: cover;
 }
-
 .about-content div {
     flex: 1;
 }
 
-/* Estilo para parágrafos */
-.quizphotos {
-    display: block; 
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-}
 
-.question p {
-    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Ajusta o tamanho da fonte com base na tela */
-    font-weight: bold; /* Define a fonte como negrito */
-    margin-bottom: 20px; /* Espaçamento abaixo do parágrafo */
-    color: #333; /* Cor do texto */
-    text-align: left; /* Alinha o texto à esquerda */
-    padding-bottom: 10px; /* Espaçamento interno abaixo do texto para a linha */
-    border-radius: 5px; /* Cantos arredondados para a área de fundo */
-    margin-left: 0;
-}
-
-@media (min-width: 768px) {
-
-    .hero {
-        height: 50vh;
-    }
-
-    .hero-content {
-        max-width: 70%;
-        margin: 45px auto 0;
-    }
-    
-    /* Novo container para o texto */
-    .hero-text-container {
-        background: #00000099;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    
-    .hero-text-container h2 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-    }
-    
-    .hero-text-container p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-    
+@media (max-width: 768px) {
 
     .logo {
         display: flex;
@@ -387,13 +303,10 @@ section {
         text-decoration: none;
     }
 
-    .about {
-        margin: 30px; /* Espaçamento entre os blocos em telas maiores */
-    }
-
     /* Títulos das seções */
     .section-title {
         text-align: left;
+        margin: 60px 0 40px;
         margin: 60px 0 40px 30px;
         font-size: 25px;
     }
@@ -403,13 +316,14 @@ section {
         text-align: center;
         font-size: 40px;
     }
-
     .div-blocos {
         display: flex;
-        margin: 60px 0;
+        width: 80%;
+        margin: 60px;
     }
 
     .div-bloco1 {
+        height: 6px;
         height: 8px;
         width: 30%;
         background: linear-gradient(to right, #ffd04f, #ff9340);
@@ -417,14 +331,14 @@ section {
     }
 
     .div-bloco2 {
+        height: 6px;
         height: 8px;
         width: 30%;
         background: linear-gradient(to right, #a44fff, #4079ff);
         margin: 0 auto;
     }
-
     .div-bloco1, .div-bloco2 {
         flex: 1; /* As divs vão compartilhar o espaço disponível igualmente */
-        margin: 0; 
+        margin: 0 ; 
     }
 }

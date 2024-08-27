@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+/* Reset básico */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -33,10 +33,17 @@ header {
     list-style: none;
 }
 
-.nav-item a {
-    margin: 0 15px;
+.nav-item {
+    font-size: 1.15rem;
 }
 
+.nav-item a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+}
 
 .nav-link {
     font-weight: bold;
@@ -141,6 +148,61 @@ nav ul li.submenu ul li a:hover {
     display: none;
 }
 
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu .sub-menu {
+    text-decoration: none;
+    color: #000000;
+    display: none;
+}
+
+.menu a{
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.menu:hover {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.container {
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 80%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    left: 5%;
+    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+    top: 15px;;  /* Distância do topo da janela */
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+}
+
+
+.mobile-menu-icon {
+    position: fixed; /* O elemento será posicionado em relação à janela do navegador */
+    right: 5%;
+    top: 10px;  /* Distância do topo da janela */
+    width: 25px;
+    height: auto;
+    display: none;
+}
+
 .mobile-menu {
     display: none;
 }
@@ -158,7 +220,6 @@ section{
 }
 
 @media screen and (max-width: 730px) {
-    
     .logo {
         display: flex;
         align-items: center;
@@ -242,9 +303,6 @@ section{
         padding: 10 0px;
         text-decoration: none;
     }
-
-
-
 }
 
 

@@ -10,6 +10,7 @@
 
 /* Cabeçalho */
 header {
+    top: 0;
     z-index: 1000;
     position: fixed;
     width: 100%;
@@ -32,7 +33,7 @@ body {
 }
 
 .nav-bar {
-    top: 0;
+    background: white;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
