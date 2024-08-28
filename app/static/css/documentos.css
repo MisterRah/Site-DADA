@@ -220,12 +220,22 @@ nav ul li.submenu ul li a:hover {
 }
 
 section{
+    width: auto;
     padding-top: 80px;
     width: 80%;
     margin: 0 auto; /* Centraliza horizontalmente */
 }
+section img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura da div */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Garante que a imagem cubra toda a div, possivelmente cortando partes */
+    border-radius: 10px; /* Opcional, adiciona cantos arredondados */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem (comportamento inline) */
+}
+
 
 @media screen and (max-width: 730px) {
+
     .logo {
         display: flex;
         align-items: center;
@@ -236,7 +246,11 @@ section{
         padding: 5px 10px;
         border-radius: 5px;
     }
-    
+        
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
         height: auto;
@@ -310,6 +324,7 @@ section{
         padding: 10 0px;
         text-decoration: none;
     }
+
 }
 
 
