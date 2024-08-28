@@ -1,9 +1,12 @@
 .flash-messages {
     position: fixed;
     top: 20px;
-    left: 500px;
-    right: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* ou a largura desejada */
+    margin: 0 auto;
     z-index: 1000;
+    text-align: center; /* Para centralizar o texto */
 }
 
 .flash-message {

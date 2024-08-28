@@ -1,35 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to top, #001f3f, #003366);
-    min-height: 100vh;
     padding: 0;
-    overflow-x: hidden;
-}
-
-section {
-    padding: 80px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.container h2 {
-    font-size: 2em;
-    color: #fff;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 header {
@@ -40,13 +15,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-header .container {
-    margin-bottom: 100px;
-    height: 100px;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container h2 {
+    padding: 40px;
+    text-align: center;
 }
 
 .logo {
@@ -205,7 +176,6 @@ nav ul li.submenu ul li a:hover {
     border-bottom-color: #007bff;
 }
 
-
 .hero {
     background: url('../img/lean.jpg') no-repeat center center/cover;
     color: #fff;
@@ -238,9 +208,9 @@ nav ul li.submenu ul li a:hover {
 }
 
 .btn {
+    margin-bottom: 0;
     font-style: none;
     display: inline-block;
-    margin-top: 10px;
     background: #007bff;
     color: #fff;
     padding: 15px 25px;
@@ -257,8 +227,8 @@ nav ul li.submenu ul li a:hover {
 
 
 .courses {
+    padding: 40px 0;
     background: url('../img/papel.webp')  no-repeat center center/cover;
-;
 }
 
 .course-list {
@@ -380,7 +350,7 @@ footer {
 @media (max-width: 768px) {
 
     .hero {
-        height: 50vh;
+        height: 75vh;
     }
 
     .hero-content {
@@ -389,12 +359,6 @@ footer {
     }
     
     /* Novo container para o texto */
-    .hero-text-container {
-        background: #00000099;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    
     .hero-text-container h2 {
         font-size: 1.8rem;
         margin-bottom: 20px;
@@ -405,7 +369,30 @@ footer {
         margin-bottom: 20px;
     }
     .course {
-        width: 100%;
+        padding: 10px;
+        margin: 0;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Garante que o botão fique no final */
+    }
+
+    .course img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .course h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        color: #007bff;
+    }
+    
+    .course p {
+        margin-bottom: 15px;
+        font-size: 0.7rem;
+        color: #555;
     }
 
     .flashcard {
@@ -423,9 +410,12 @@ footer {
         border-radius: 5px;
     }
 
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
-        height: auto;
     }
 
     .nav-bar {
@@ -463,7 +453,6 @@ footer {
     .mobile-menu .nav-item {
         display: block;
         padding: 1rem 0;
-    
     }
 
     .open {
@@ -490,13 +479,18 @@ footer {
     } 
 
     .sub-menu a {
+        font-weight: 300;
         color: #000000;;
         padding: 10 0px;
         text-decoration: none;
     }
 
     .btn {
-        width: 100%;
+        margin: 0 auto;
+        margin-top: auto; /* Empurra o botão para o final */
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 70%;
         text-align: center;
     }
 

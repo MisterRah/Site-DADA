@@ -336,7 +336,11 @@ footer {
         padding: 5px 10px;
         border-radius: 5px;
     }
-    
+        
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
         height: auto;

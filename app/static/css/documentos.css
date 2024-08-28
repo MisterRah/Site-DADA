@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
 /* Reset básico */
 * {
     box-sizing: border-box;
@@ -187,6 +189,10 @@ nav ul li.submenu ul li a:hover {
     padding: 5px 10px;
     border-radius: 5px;
 }
+    
+.logo a {
+    height: 29px;
+}
 
 .logo img {
     width: 125px;
@@ -299,6 +305,7 @@ section{
     } 
 
     .sub-menu a {
+        font-weight: 300;
         color: #000000;;
         padding: 10 0px;
         text-decoration: none;

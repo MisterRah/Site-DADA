@@ -184,13 +184,33 @@ nav ul li.submenu ul li a:hover {
 }
 /* Seções */
 section {
+    margin: auto;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; 
+    width: 90%;
     padding: 60px 0;
 }
+
+.section-title {
+    text-align: left;
+    margin: 60px 0 40px;
+    margin: 60px 0 40px 30px;
+    font-size: 25px;
+}
+
+.section-title-h2 {
+    padding-top: 70px;
+    text-align: center;
+    font-size: 40px;
+}
+
 .about {
+    display: flex;
     border-radius: 20px;
     background: #f4f4f4;
     padding: 20px;
-    margin: 30px; /* Espaço entre os blocos */
+    margin: 0px 30px 60px; /* Espaço entre os blocos */
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
     transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -206,6 +226,7 @@ section {
     align-items: center;
     gap: 40px;
 }
+
 .about-content img {
     width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
     height: 150px; /* Ajuste o tamanho da imagem conforme necessário */
@@ -215,6 +236,35 @@ section {
 .about-content div {
     flex: 1;
 }
+
+.div-blocos {
+    display: flex;
+    align-items: center; /* Centraliza os itens dentro da div verticalmente */
+    justify-content: center; /* Centraliza os itens dentro da div horizontalmente */
+    width: 80%;
+    margin: 60px auto; /* Centraliza a div horizontalmente */
+}
+
+.div-bloco1 {
+    height: 6px;
+    height: 8px;
+    width: 30%;
+    background: linear-gradient(to right, #ffd04f, #ff9340);
+    margin: 0;
+}
+
+.div-bloco2 {
+    height: 6px;
+    height: 8px;
+    width: 30%;
+    background: linear-gradient(to right, #a44fff, #4079ff);
+    margin: 0;
+}
+.div-bloco1, .div-bloco2 {
+    flex: 1; /* As divs vão compartilhar o espaço disponível igualmente */
+    margin: 0 ; 
+}
+
 
 
 @media (max-width: 768px) {
@@ -230,6 +280,10 @@ section {
         border-radius: 5px;
     }
     
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
         height: auto;
@@ -268,7 +322,6 @@ section {
 
     }
     .mobile-menu .nav-item {
-   
         display: block;
         padding: 1rem 0;
     
@@ -298,6 +351,7 @@ section {
     } 
 
     .sub-menu a {
+        font-weight: 300;
         color: #000000;;
         padding: 10 0px;
         text-decoration: none;
@@ -305,40 +359,41 @@ section {
 
     /* Títulos das seções */
     .section-title {
-        text-align: left;
-        margin: 60px 0 40px;
-        margin: 60px 0 40px 30px;
-        font-size: 25px;
+        text-align: center;
+        width: 90%;
+        margin: 60px auto;
+        font-size: 1.6em;
     }
 
     .section-title-h2 {
-        padding-top: 70px;
+        padding-top: 40px;
         text-align: center;
-        font-size: 40px;
+        font-size: 2em;
     }
-    .div-blocos {
+
+    .about {
         display: flex;
-        width: 80%;
-        margin: 60px;
+        flex-direction: column; /* Organiza os itens em uma coluna */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+    }
+    
+    .about-content img {
+        width: 80%; /* Ajuste o tamanho da imagem conforme necessário */
+        height: auto; /* Ajuste o tamanho da imagem conforme necessário */
+        border-radius: 50%;
+        object-fit: cover;
     }
 
-    .div-bloco1 {
-        height: 6px;
-        height: 8px;
-        width: 30%;
-        background: linear-gradient(to right, #ffd04f, #ff9340);
-        margin: 0 auto;
+    .about h3{
+        margin-bottom: 20px;
     }
 
-    .div-bloco2 {
-        height: 6px;
-        height: 8px;
-        width: 30%;
-        background: linear-gradient(to right, #a44fff, #4079ff);
-        margin: 0 auto;
+    .about-content {
+        margin: 0 30px;
+        text-align: center;
+        flex-direction: column; /* Alinha a imagem acima do texto */
+        align-items: center; /* Centraliza o texto e a imagem */
+        gap: 25px; /* Espaço entre a imagem e o texto */
     }
-    .div-bloco1, .div-bloco2 {
-        flex: 1; /* As divs vão compartilhar o espaço disponível igualmente */
-        margin: 0 ; 
-    }
+
 }

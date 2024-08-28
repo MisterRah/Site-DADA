@@ -300,7 +300,7 @@ footer {
 @media screen and (max-width: 730px) {
     
     .hero {
-        height: 50vh;
+        height: 75vh;
     }
 
     .hero-content {
@@ -336,7 +336,11 @@ footer {
         padding: 5px 10px;
         border-radius: 5px;
     }
-    
+        
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
         height: auto;
@@ -405,6 +409,7 @@ footer {
     } 
 
     .sub-menu a {
+        font-weight: 300;
         color: #000000;;
         padding: 10 0px;
         text-decoration: none;

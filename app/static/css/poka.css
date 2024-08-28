@@ -346,6 +346,10 @@ footer {
         border-radius: 5px;
     }
     
+    .logo a {
+        height: 29px;
+    }
+
     .logo img {
         width: 80px;
         height: auto;
@@ -414,6 +418,7 @@ footer {
     } 
 
     .sub-menu a {
+        font-weight: 300;
         color: #000000;;
         padding: 10 0px;
         text-decoration: none;
