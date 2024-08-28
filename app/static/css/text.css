@@ -198,12 +198,12 @@ nav ul li.submenu ul li a:hover {
 }
 
 .hero-text-container h2 {
-    font-size: 2.5em;
+    font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
 .hero-text-container p {
-    font-size: 1.2em;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
@@ -260,15 +260,16 @@ nav ul li.submenu ul li a:hover {
 .course img {
     max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .course h3 {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     color: #007bff;
 }
 
 .course p {
+    margin-bottom: 15px;
     color: #555;
 }
 
@@ -354,20 +355,22 @@ footer {
     }
 
     .hero-content {
+        padding: 15px;
         max-width: 70%;
         margin: 45px auto 0;
     }
     
     /* Novo container para o texto */
     .hero-text-container h2 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
+        font-size: 1rem;
+        margin-bottom: 8px;
     }
     
     .hero-text-container p {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.7rem;
+        margin-bottom: 15px;
     }
+
     .course {
         padding: 10px;
         margin: 0;
@@ -380,17 +383,14 @@ footer {
     .course img {
         max-width: 100%;
         border-radius: 10px;
-        margin-bottom: 15px;
     }
     
     .course h3 {
         font-size: 1rem;
-        margin-bottom: 15px;
         color: #007bff;
     }
     
     .course p {
-        margin-bottom: 15px;
         font-size: 0.7rem;
         color: #555;
     }
@@ -492,6 +492,10 @@ footer {
         font-size: 0.9rem;
         width: 70%;
         text-align: center;
+    }
+    #btn_quadrado {
+        font-size: 0.8em;
+        width: 90%;
     }
 
    

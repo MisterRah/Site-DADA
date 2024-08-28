@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const correctAnswers = {
-        q1: 'c',
+        q1: 'b',
         q2: 'c',
-        q3: 'c',
-        q4: 'c',
-        q5: 'c'
+        q3: 'b',
+        q4: 'a',
+        q5: 'd'
     };
 
     const formIds = ['quiz-form-1', 'quiz-form-2', 'quiz-form-3', 'quiz-form-4', 'quiz-form-5'];
