@@ -41,4 +41,3 @@ def documentos():
     flash("Saiba como o site foi feito", "success")
     return render_template("documentos.html")
 
-app.run(debug=True)
