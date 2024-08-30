@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 message.style.display = 'none'; // Remove o elemento do layout
             }, 500);  // Tempo para a transição de opacidade
-        }, 3000);  // Tempo antes da mensagem começar a desaparecer
+        }, 1500);  // Tempo antes da mensagem começar a desaparecer
     });
 });

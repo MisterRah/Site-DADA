@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentos - DASS-Lean</title>
     <link rel="stylesheet" href="static/css/documentos.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 
 <body>
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
         <nav class="nav-bar">
             <div class="logo">
                 <a href="/"><img src="static/img/Rojo.png" alt="Logo DASS"></a>
@@ -28,7 +40,7 @@
                         </li>
                         <li class="menu"><a href="/quiz">Quiz</a></li>
                         <li class="menu"><a href="/sobre">Sobre Nós</a></li>
-                        <li class="menu"><a href="/documentos">Documentos</a></li>
+                        <li class="menu"><a href="/documentos">Documentação</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,57 +65,101 @@
                     </li>
                     <li class="nav-item"><a href="/quiz">Quiz</a></li>
                     <li class="nav-item"><a href="/sobre">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="/documentos">Documentos</a></li>
+                    <li class="nav-item"><a href="/documentos">Documentação</a></li>
                 </ul>
             </div>
     </header>
+
     <section id="about" class="about">
         <div class="hero">
-            <img src="static/img/600400.png">
-            <h2>CSS</h2>
+            <h2>Introdução </h2>
+            <div class="div-blocos">
+                <div class="div-bloco1" ></div>
+                <div class="div-bloco2" ></div>
+            </div>
             <div class="about-content">
-                <p>A Gestão Visual é uma abordagem que utiliza elementos visuais, como gráficos, sinalizações e indicadores, para facilitar a comunicação e a compreensão das informações dentro de uma organização. O objetivo é tornar os processos, problemas e métricas mais evidentes para todos os membros da equipe, melhorando a eficiência e a tomada de decisões.</p>
+                <p>O intuito desta página é justamente dar uma breve explicação sobre como fizemos o site e quais ferramentas utilizamos. </p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="hero">
-            <img src="static/img/600400.png">
-            <h2>JavaScript</h2>
+            <h2>Desenvolvimento</h2>
+            <div class="div-blocos">
+                <div class="div-bloco1" ></div>
+                <div class="div-bloco2" ></div>
+            </div>
             <div class="about-content">
-                <p>A Gestão Visual é uma abordagem que utiliza elementos visuais, como gráficos, sinalizações e indicadores, para facilitar a comunicação e a compreensão das informações dentro de uma organização. O objetivo é tornar os processos, problemas e métricas mais evidentes para todos os membros da equipe, melhorando a eficiência e a tomada de decisões.</p>
+                <p>O principal assunto que abordaremos é como foi estruturado o site: </p>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="about" class="about">
+        <div class="hero">
+            <h2>Front-end</h2>
+            <div class="div-blocos">
+                <div class="div-bloco1" ></div>
+                <div class="div-bloco2" ></div>
+            </div>
+            <div class="about-content">
+                <p>O front-end é basicamente toda a parte visual do site, que o usuário consegue ver. Nessa parte visual, utilizamos HTML (HyperText Markup Language), que é uma linguagem de marcação usada na construção de páginas web e que é interpretada pelos navegadores que utilizamos. 
+
+                    Além disso, usamos CSS (Cascading Style Sheets), que é basicamente uma ferramenta que possibilita a aplicação de estilos aos elementos HTML. 
+                    
+                    E, por último, mas muito importante, a linguagem de programação chamada JavaScript, que permite implementar itens mais complexos em páginas web. Por exemplo, a parte de verificação das respostas do quiz foi feita em JavaScript. Basicamente, o código em JS (abreviação de JavaScript) no quiz verifica qual alternativa o usuário selecionou e se ela está certa ou errada. Independentemente de qual seja a resposta do usuário, o código fará algo a respeito disso. </p>
+                    <img src="static/img/frontend.png"> 
+                    <img src="static/img/frontend_mobile.png"> 
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="hero">
-            <img src="static/img/600400.png">
-            <h2>HTML</h2>
+
+            <h2>Back-end</h2>
+            <div class="div-blocos">
+                <div class="div-bloco1" ></div>
+                <div class="div-bloco2" ></div>
+            </div>
             <div class="about-content">
-                <p>A Gestão Visual é uma abordagem que utiliza elementos visuais, como gráficos, sinalizações e indicadores, para facilitar a comunicação e a compreensão das informações dentro de uma organização. O objetivo é tornar os processos, problemas e métricas mais evidentes para todos os membros da equipe, melhorando a eficiência e a tomada de decisões.</p>
+                <p>O back-end é a parte de um sistema ou aplicação que lida com a lógica, operações, cálculos e gerenciamento de dados que ocorrem no servidor. É o "lado invisível" de uma aplicação, responsável por processar as requisições feitas pelo front-end (a parte visível e interativa com o usuário) e retornar as respostas apropriadas. 
+
+                    No nosso caso, utilizamos um framework chamado Flask, que é utilizado para Python Web (Python é outra linguagem de programação). Pense no framework como uma "base" ou "esqueleto" para a sua aplicação. Em vez de começar do zero, você usa essa base que já tem muitas funcionalidades prontas, permitindo que você se concentre mais nas partes específicas e únicas do seu projeto. 
+                    
+                    O Flask para esse site foi utilizado basicamente para o gerenciamento de rotas dentro do nosso site, que seria, basicamente, quando você clica para ir para outra página do site. Também usamos outro recurso do Flask conhecido como flash, que é basicamente uma mensagem que aparece na tela; você poderá ver isso quando entrar na página inicial ou no quiz. </p>
+                    <img src="static/img/backend1.png">
+                    <img src="static/img/backend_mobi.png"> 
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="hero">
-            <img src="static/img/600400.png">
-            <h2>PYTHON</h2>
+            <h2>Conclusão</h2>
+            <div class="div-blocos">
+                <div class="div-bloco1" ></div>
+                <div class="div-bloco2" ></div>
+            </div>
             <div class="about-content">
-                <p>A Gestão Visual é uma abordagem que utiliza elementos visuais, como gráficos, sinalizações e indicadores, para facilitar a comunicação e a compreensão das informações dentro de uma organização. O objetivo é tornar os processos, problemas e métricas mais evidentes para todos os membros da equipe, melhorando a eficiência e a tomada de decisões.</p>
+                <p>Basicamente, esta página foi criada com a finalidade de mostrar um pouco mais sobre o site, principalmente para aqueles que podem ter ficado curiosos sobre o assunto. De qualquer maneira, se você chegou até aqui, muito obrigado pela sua atenção</p>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="hero">
-            <p>&copy; 2024 DASS-Lean. Todos os direitos reservados.</p>
+    <section id="about" class="about">
+        <div class= "qrcode">
+            <h2>QR CODE</h2>
+            <img src="static/img/qrcode.jpeg">
         </div>
-    </footer>
+    </section>
 
 
+
+
+
+    <script src="static/js/flash.js"></script>
     <script src="static/js/barra_menu.js"></script>
 </body>
 </html>

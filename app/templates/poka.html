@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poka Yoke</title>
     <link rel="stylesheet" href="static/css/poka.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 <body>
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
         <nav class="nav-bar">
             <div class="logo">
                 <a href="/"><img src="static/img/Rojo.png" alt="Logo DASS"></a>
@@ -27,7 +39,7 @@
                         </li>
                         <li class="menu"><a href="/quiz">Quiz</a></li>
                         <li class="menu"><a href="/sobre">Sobre Nós</a></li>
-                        <li class="menu"><a href="/documentos">Documentos</a></li>
+                        <li class="menu"><a href="/documentos">Documentação</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,7 +64,7 @@
                     </li>
                     <li class="nav-item"><a href="/quiz">Quiz</a></li>
                     <li class="nav-item"><a href="/sobre">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="/documentos">Documentos</a></li>
+                    <li class="nav-item"><a href="/documentos">Documentação</a></li>
                 </ul>
             </div>
     </header>
@@ -70,7 +82,6 @@
         <div class="container">
             <h2>O que é Poka Yoke?</h2>
             <div class="about-content">
-                <img src="static/img/pokayoke.png" alt="Poka Yoke">
                 <p>Poka Yoke é uma técnica desenvolvida no Japão para prevenir erros e garantir a qualidade dos processos e produtos. O termo, que pode ser traduzido como "à prova de erros", refere-se a dispositivos e práticas que impedem a ocorrência de erros antes que eles aconteçam.</p>
                 <p>Os sistemas Poka Yoke são projetados para detectar e corrigir erros antes que eles impactem o produto final. Isso é feito através da implementação de dispositivos ou métodos que alertam os operadores quando algo está fora do padrão ou impedem que erros sejam cometidos.</p>
                 <p>Esse método é amplamente utilizado em ambientes de manufatura e serviços para melhorar a eficiência e a qualidade, garantindo que os processos sejam seguidos corretamente e que o produto final atenda aos padrões estabelecidos.</p>
@@ -100,6 +111,6 @@
             loop: true,
         });
     </script>
-
+    <script src="static/js/flash.js"></script>
 </body>
 </html>

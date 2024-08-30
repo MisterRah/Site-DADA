@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão Visual - DASS-Lean</title>
     <link rel="stylesheet" href="static/css/kanban.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 <body>
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
         <nav class="nav-bar">
             <div class="logo">
                 <a href="/"><img src="static/img/Rojo.png" alt="Logo DASS"></a>
@@ -27,7 +39,7 @@
                         </li>
                         <li class="menu"><a href="/quiz">Quiz</a></li>
                         <li class="menu"><a href="/sobre">Sobre Nós</a></li>
-                        <li class="menu"><a href="/documentos">Documentos</a></li>
+                        <li class="menu"><a href="/documentos">Documentação</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,7 +64,7 @@
                     </li>
                     <li class="nav-item"><a href="/quiz">Quiz</a></li>
                     <li class="nav-item"><a href="/sobre">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="/documentos">Documentos</a></li>
+                    <li class="nav-item"><a href="/documentos">Documentação</a></li>
                 </ul>
             </div>
     </header>
@@ -93,7 +105,7 @@
             <p>&copy; 2024 DASS-Lean. Todos os direitos reservados.</p>
         </div>
     </footer>
-
+    <script src="static/js/flash.js"></script>
     <script src="static/js/barra_menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.js"></script>
     <script>

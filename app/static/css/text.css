@@ -16,6 +16,7 @@ header {
 }
 
 .container h2 {
+    font-size: 2em;
     padding: 40px;
     text-align: center;
 }
@@ -124,11 +125,11 @@ nav ul li.submenu ul li {
 }
 
 nav ul li.submenu ul li a {
-    padding: 10px;
+    padding: 20px;
     margin: 0;
     color: #000;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 1em;
     display: block;
     transition: background 0.1s ease;
 }
@@ -195,6 +196,11 @@ nav ul li.submenu ul li a:hover {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-content:hover {
+    transform: scale(1.05);
 }
 
 .hero-text-container h2 {
@@ -208,7 +214,7 @@ nav ul li.submenu ul li a:hover {
 }
 
 .btn {
-    margin-bottom: 0;
+    margin:0 auto;
     font-style: none;
     display: inline-block;
     background: #007bff;
@@ -239,6 +245,10 @@ nav ul li.submenu ul li a:hover {
 }
 
 .course {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o botão fique no final */
     margin: 0 18px;
     font-weight: bold;
     background-color: #f1f1f1;
@@ -352,6 +362,10 @@ footer {
 
     .hero {
         height: 75vh;
+    }
+
+    .hero img {
+        background: url("stati");
     }
 
     .hero-content {
@@ -490,7 +504,6 @@ footer {
         margin-top: auto; /* Empurra o botão para o final */
         padding: 10px 20px;
         font-size: 0.9rem;
-        width: 70%;
         text-align: center;
     }
     #btn_quadrado {

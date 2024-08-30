@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profissionais Envolvidos</title>
     <link rel="stylesheet" href="static/css/sobre.css">
+    <link rel="stylesheet" href="static/css/flash.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swiper/8.4.5/swiper-bundle.min.css">
 </head>
 <body>
     <header>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
         <nav class="nav-bar">
             <div class="logo">
                 <a href="/"><img src="static/img/Rojo.png" alt="Logo DASS"></a>
@@ -27,7 +39,7 @@
                         </li>
                         <li class="menu"><a href="/quiz">Quiz</a></li>
                         <li class="menu"><a href="/sobre">Sobre Nós</a></li>
-                        <li class="menu"><a href="/documentos">Documentos</a></li>
+                        <li class="menu"><a href="/documentos">Documentação</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,7 +64,7 @@
                     </li>
                     <li class="nav-item"><a href="/quiz">Quiz</a></li>
                     <li class="nav-item"><a href="/sobre">Sobre Nós</a></li>
-                    <li class="nav-item"><a href="/documentos">Documentos</a></li>
+                    <li class="nav-item"><a href="/documentos">Documentação</a></li>
                 </ul>
             </div>
     </header>
@@ -66,28 +78,28 @@
         <h3 class="section-title">Responsáveis pela Criação do Site</h3>
         <div class="about">
             <div class="about-content">
-                <img src="https://i.pinimg.com/564x/1f/f0/db/1ff0db96fc34177433dc785768dac693.jpg" alt="Profissional 1">
+                <img src="static/img/biel.jpeg" alt="Profissional 1">
                 <div>
-                    <h3>Biel</h3>
-                    <p>João é um especialista em desenvolvimento front-end com mais de 10 anos de experiência. Ele é responsável pela criação de interfaces de usuário modernas e responsivas.</p>
+                    <h3>Gabriel Ferraz</h3>
+                    <p>Tenho 20 anos, sou jovem aprendiz no setor da transferência. Estou cursando o 2° semenstre da faculdade de ciência da computação e faço outro cursos relacionados.</p>
                 </div>
             </div>
         </div>
         <div class="about">
             <div class="about-content">
-                <img src="https://i.pinimg.com/564x/40/64/15/40641574f1fc6ebb0013766a44953c83.jpg" alt="Profissional 2">
+                <img src="static/img/Ramon.jpeg" alt="Profissional 2">
                 <div>
-                    <h3>Ramon</h3>
-                    <p>Maria é uma experiente desenvolvedora back-end. Ela trabalha na construção e manutenção da lógica de servidores e bancos de dados, garantindo que tudo funcione sem problemas.</p>
+                    <h3>Ramon Menezes</h3>
+                    <p>Tenho 21 anos, sou jovem aprendiz no setor Fábrica de aparelhos. Atualmente estou cursando o 2° semestre da faculdade de ciência da computação. </p>
                 </div>
             </div>
         </div>
         <div class="about">
             <div class="about-content">
-                <img src="https://i.pinimg.com/564x/28/1a/af/281aaf73c5b37d8be3b0ed20caade1c9.jpg" alt="Profissional 3">
+                <img src="static/img/kevin.jpeg" alt="Profissional 3">
                 <div>
                     <h3>Kevin</h3>
-                    <p>Pedro é um especialista em UX/UI, focado em otimizar a experiência do usuário. Ele garante que os aplicativos sejam intuitivos e fáceis de usar.</p>
+                    <p>Graduando em Sistema de informação, atuando como estagiário, sendo programador web para a prefeitura e Jovem Aprendiz na Dass, no setor do Ambulatório</p>
                 </div>
             </div>
         </div>
@@ -99,25 +111,25 @@
         <h3 class="section-title">Responsáveis pela Criação do Conteúdo</h3>
         <div class="about">
             <div class="about-content">
-                <img src="https://i.pinimg.com/564x/59/f7/fd/59f7fd15f3ed0b201320425eac0deb05.jpg" alt="Profissional 4">
+                <img src="static/img/thay.jpeg" alt="Profissional 4">
                 <div>
-                    <h3>Sra. Thay</h3>
-                    <p>Ana é uma gerente de projeto com vasta experiência em coordenação de equipes e planejamento de projetos. Ela mantém tudo nos trilhos e garante o sucesso do projeto.</p>
+                    <h3>Thay</h3>
+                    <p>Tenho 19 anos, sou jovem aprendiz e passei pelos setores do termo e corte. Atualmente sou estudante do ensino médio do colégio CIEB.</p>
                 </div>
             </div>
         </div>
         <div class="about" id="ultimo">
             <div class="about-content" >
-                <img src="https://i.pinimg.com/736x/9b/a8/dc/9ba8dc20234f5b385411864d61d978cc.jpg" alt="Profissional 5">
+                <img src="static/img/kayla.jpeg" alt="Profissional 5">
                 <div>
-                    <h3>Sra. Kayla</h3>
-                    <p>Lucas é um analista de qualidade que realiza testes rigorosos para garantir que o produto final atenda aos padrões de qualidade e seja livre de bugs.</p>
+                    <h3>Kayla Ferraz</h3>
+                    <p>tenho 19 anos, sou graduanda em biomedicina e atualmente sou jovem aprendiz no setor do termo. Já passei pelo setor da transferência.</p>
                 </div>
             </div>
         </div>
         <br><br>
     </section>
-
+    <script src="static/js/flash.js"></script>
     <script src="static/js/barra_menu.js"></script>
 </body>
 </html>
